@@ -7,6 +7,7 @@
   padding: 5px;
   font-family: "font-1", Arial;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 li {
   list-style: none;
@@ -16,15 +17,41 @@ a:visited {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  z-index: 1000;
+  position: relative;
 }
 a:hover {
   font-size: 1.3rem;
   color: #2128bd;
 }
+.mouse {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 1500px;
+  mix-blend-mode: difference;
+}
+#cursor {
+  background: #2128bd;
+  width: 14px;
+  height: 14px;
+}
+#mouse1 {
+  background: white;
+  height: 100px;
+  width: 100px;
+  transition: 0.2s ease-out;
+}
+#mouse2 {
+  background: rgb(41, 41, 41);
+  height: 200px;
+  width: 200px;
+  transition: 0.3s ease-out;
+}
 body {
   background: rgb(27, 27, 27);
   color: rgb(246, 246, 246);
   min-height: 100vh;
+  cursor: none;
 }
 nav {
   display: grid;
